@@ -1,0 +1,504 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+:root {
+
+    /* CORES */
+    --cor-primaria: #6B3F35;
+    --cor-primaria-escura: #432720;
+    --cor-secundaria: #9B756A;
+    --cor-secundaria-clara: #DFD1C8;
+
+    --cor-neutra-1: #FFFFFF;
+    --cor-neutra-2: #F8F5F0;
+    --cor-neutra-3: #333333;
+    --cor-neutra-4: #BBBBBB;
+
+    /* TIPOGRAFIA */
+    --fonte-tamanho-1: 16px;
+    --fonte-tamanho-2: 18px;
+    --fonte-tamanho-3: 20px;
+    --fonte-tamanho-4: 28px;
+    --fonte-tamanho-5: 32px;
+
+    /* ESPAÇAMENTOS */
+    --espaco-1: 4px;
+    --espaco-2: 8px;
+    --espaco-3: 16px;
+    --espaco-4: 24px;
+    --espaco-5: 32px;
+    --espaco-6: 48px;
+    --espaco-7: 64px;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-neutra-2);
+    color: var(--cor-neutra-3);
+    line-height: 1.6;
+    font-size: var(--fonte-tamanho-1);
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+header {
+    background-color: var(--cor-primaria);
+    padding: var(--espaco-4) 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    gap: var(--espaco-4);
+    align-items: center;
+}
+.menu-toggle {
+    display: none;
+}
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: var(--cor-neutra-1);
+    padding: var(--espaco-2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown:focus-within .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: var(--espaco-2);
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: var(--cor-secundaria-clara);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+============================== */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--espaco-4);
+}
+main section,
+#app section {
+    grid-column: 1 / -1;
+}
+
+#app {
+    display: contents;
+}
+
+section {
+    background-color: var(--cor-neutra-1);
+    padding: var(--espaco-5);
+    margin-bottom: var(--espaco-5);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: var(--cor-primaria);
+    font-size: var(--fonte-tamanho-5);
+    margin-top: 0;
+}
+
+h2 {
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-tamanho-4);
+    margin-top: 0;
+}
+
+h3 {
+    color: var(--cor-secundaria);
+    font-size: var(--fonte-tamanho-3);
+}
+
+
+p {
+    font-size: var(--fonte-tamanho-2);
+}
+
+
+/* ==============================
+   IMAGENS
+============================== */
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto 0;
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   LINKS
+============================== */
+
+main a {
+    color: #6b3f35;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #432720;
+}
+
+
+/* ==============================
+   FORMULÁRIO
+============================== */
+
+form {
+    background-color: var(--cor-neutra-1);
+    padding: var(--espaco-5);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    border: 2px solid var(--cor-secundaria-clara);
+    border-radius: 10px;
+    padding: var(--espaco-4);
+    margin-bottom: var(--espaco-4);
+}
+
+legend {
+    color: #6b3f35;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: var(--espaco-3);
+    border: 1px solid var(--cor-neutra-4);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--cor-secundaria);
+    border-color: var(--cor-primaria);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==============================
+   BOTÕES
+============================== */
+
+button {
+    padding: var(--espaco-3) var(--espaco-4);
+    margin-right: var(--espaco-2);
+    margin-top: var(--espaco-2);
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-1);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--cor-primaria-escura);
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-neutra-1);
+    text-align: center;
+    padding: var(--espaco-4);
+    margin-top: var(--espaco-6);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+/* ==============================
+   BREAKPOINT 1 - TELAS GRANDES
+============================== */
+
+@media (max-width: 1200px) {
+
+    main {
+        width: 92%;
+    }
+
+}
+
+
+/* ==============================
+   BREAKPOINT 2 - NOTEBOOKS
+============================== */
+
+@media (max-width: 992px) {
+
+    main {
+        width: 94%;
+    }
+
+    header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+
+
+/* ==============================
+   BREAKPOINT 3 - TABLETS
+============================== */
+
+@media (max-width: 768px) {
+
+header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+.menu-toggle {
+    display: block;
+    font-size: 28px;
+    padding: 8px 12px;
+    margin: 0;
+    }
+
+.menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.menu.ativo {
+    display: flex;
+}
+    
+    
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+
+/* ==============================
+   BREAKPOINT 4 - CELULARES
+============================== */
+
+@media (max-width: 576px) {
+
+    main {
+        width: 96%;
+    }
+
+    section,
+    form {
+        padding: var(--espaco-4);
+    }
+
+    h1 {
+        font-size: var(--fonte-tamanho-4);
+    }
+
+    p {
+        font-size: var(--fonte-tamanho-1);
+    }
+
+    button {
+        width: 100%;
+        margin: var(--espaco-2) 0;
+    }
+
+}
+
+
+/* ==============================
+   BREAKPOINT 5 - CELULARES PEQUENOS
+============================== */
+
+@media (max-width: 400px) {
+
+    header img {
+        width: 80px;
+    }
+
+    nav {
+        gap: var(--espaco-2);
+    }
+
+    section,
+    form {
+        padding: var(--espaco-3);
+    }
+
+    h1 {
+        font-size: var(--fonte-tamanho-3);
+    }
+    
+ /* ==============================
+   BADGES
+============================== */
+
+.badge {
+    display: inline-block;
+    background-color: var(--cor-secundaria-clara);
+    color: var(--cor-primaria-escura);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+/* ==============================
+   ALERTAS
+============================== */
+
+.alerta {
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.alerta.sucesso {
+    background-color: #E8F5E9 !important;
+    color: #2E7D32 !important;
+    border-color: #81C784 !important;
+}
+
+.formulario-cadastro {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.formulario-cadastro fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formulario-cadastro fieldset legend {
+    grid-column: 1 / -1;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-cadastro fieldset label {
+    margin-bottom: 0;
+}
+
+.formulario-cadastro fieldset input,
+.formulario-cadastro fieldset select,
+.formulario-cadastro fieldset textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+.toast {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    z-index: 2000;
+}
+
+/* Ajuste da estrutura SPA */
+#app {
+    display: contents;
+}

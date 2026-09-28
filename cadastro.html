@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro de Voluntário - Mãos que Ajudam</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="img/logo.png"
+             alt="Logo da ONG Mãos que Ajudam">
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="cadastro.html">Seja Voluntário</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h1>Seja um Voluntário</h1>
+
+            <p>
+                Preencha o formulário abaixo para demonstrar
+                seu interesse em participar das ações da ONG
+                Mãos que Ajudam.
+            </p>
+
+        </section>
+
+
+        <form id="formulario-cadastro" class="formulario-cadastro">
+
+
+            <fieldset>
+
+                <legend>Dados pessoais</legend>
+
+    <div class="campo-formulario">
+    <label for="nome">
+        Nome completo:
+    </label>
+
+    <input
+        type="text"
+        id="nome"
+        name="nome"
+        required
+        autocomplete="name"
+    >
+</div>
+
+<div class="campo-formulario">
+    <label for="email">
+        E-mail:
+    </label>
+
+    <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        autocomplete="email"
+    >
+</div>
+
+                <div class="campo-formulario">
+    <label for="cpf">
+        CPF:
+    </label>
+
+    <input
+        type="text"
+        id="cpf"
+        name="cpf"
+        placeholder="000.000.000-00"
+        pattern="[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}"
+        maxlength="14"
+        inputmode="numeric"
+        required
+    >
+</div>
+
+<div class="campo-formulario">
+    <label for="data-nascimento">
+        Data de nascimento:
+    </label>
+
+    <input
+        type="date"
+        id="data-nascimento"
+        name="data-nascimento"
+        required
+        autocomplete="bday"
+    >
+</div>
+
+            </fieldset>
+
+
+            <br>
+
+
+            <fieldset>
+
+                <legend>Informações de contato</legend>
+
+                <label for="telefone">
+                    Telefone:
+                </label>
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                    pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                    maxlength="15"
+                    inputmode="tel"
+                    required
+                    autocomplete="tel"
+                >
+
+            </fieldset>
+
+
+            <br>
+
+
+            <fieldset>
+
+                <legend>Endereço</legend>
+
+                <label for="cep">
+                    CEP:
+                </label>
+
+                <input
+                    type="text"
+                    id="cep"
+                    name="cep"
+                    placeholder="00000-000"
+                    pattern="[0-9]{5}-[0-9]{3}"
+                    maxlength="9"
+                    inputmode="numeric"
+                    required
+                    autocomplete="postal-code"
+                >
+
+
+                <br><br>
+
+
+                <label for="endereco">
+                    Endereço:
+                </label>
+
+                <input
+                    type="text"
+                    id="endereco"
+                    name="endereco"
+                    required
+                    autocomplete="address-line1"
+                >
+
+
+                <br><br>
+
+
+                <label for="cidade">
+                    Cidade:
+                </label>
+
+                <input
+                    type="text"
+                    id="cidade"
+                    name="cidade"
+                    required
+                    autocomplete="address-level2"
+                >
+
+
+                <br><br>
+
+
+                <label for="estado">
+                    Estado:
+                </label>
+
+                <select
+                    id="estado"
+                    name="estado"
+                    required
+                    autocomplete="address-level1"
+                >
+
+                    <option value="">
+                        Selecione o estado
+                    </option>
+
+                    <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+
+                </select>
+
+            </fieldset>
+
+
+            <br>
+
+
+            <fieldset>
+
+                <legend>Interesse em voluntariado</legend>
+
+                <label for="area">
+                    Área de interesse:
+                </label>
+
+                <select
+                    id="area"
+                    name="area"
+                    required
+                >
+
+                    <option value="">
+                        Selecione uma opção
+                    </option>
+
+                    <option value="doacoes">
+                        Organização de doações
+                    </option>
+
+                    <option value="campanhas">
+                        Campanhas solidárias
+                    </option>
+
+                    <option value="eventos">
+                        Eventos e ações sociais
+                    </option>
+
+                    <option value="comunicacao">
+                        Comunicação e divulgação
+                    </option>
+
+                </select>
+
+
+                <br><br>
+
+
+                <label for="mensagem">
+                    Conte um pouco sobre seu interesse:
+                </label>
+
+                <br>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    cols="40"
+                    placeholder="Digite sua mensagem..."
+                ></textarea>
+
+            </fieldset>
+
+
+            <br>
+
+
+            <button type="submit">
+                Enviar cadastro
+            </button>
+
+            <button type="reset">
+                Limpar formulário
+            </button>
+
+            <div class="alerta sucesso" id="alerta-sucesso">
+    Cadastro realizado com sucesso! Obrigado por querer fazer parte da ONG Mãos que Ajudam.
+</div>
+
+<div class="toast" id="toast">
+    Cadastro enviado com sucesso!
+</div>
+        </form>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Mãos que Ajudam - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
